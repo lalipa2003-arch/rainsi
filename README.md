@@ -11,7 +11,7 @@ This is not a Lua-to-WASM compiler. It is stock Lua, running inside WASI-WASM.
 - Lua **5.1.5**, **5.2.4**, **5.3.6**, **5.4.7**, **5.5.1**
 - Full interpreter: tables, coroutines, metatables, standard libraries
 - WASI compatibility layer for browser and Node (stdio, args, env, in-memory VFS)
-- JS â†” Lua value marshalling (primitives, tables, arrays, functions)
+- JS <-> Lua value marshalling (primitives, tables, arrays, functions)
 - Register JavaScript functions and call them from Lua
 - Call Lua functions from JavaScript
 - Captured stdout / stderr
@@ -61,10 +61,10 @@ Each version is a normal PUC-Rio release. Language and library differences betwe
 
 | Feature | 5.1 | 5.2 | 5.3+ | 5.4+ |
 | --- | --- | --- | --- | --- |
-| `loadstring` / `module()` | yes | â€” | â€” | â€” |
-| `bit32` | â€” | yes | â€” | â€” |
-| `//`, `<<`, `utf8` | â€” | â€” | yes | yes |
-| to-be-closed vars | â€” | â€” | â€” | yes |
+| `loadstring` / `module()` | yes | - | - | - |
+| `bit32` | - | yes | - | - |
+| `//`, `<<`, `utf8` | - | - | yes | yes |
+| to-be-closed vars | - | - | - | yes |
 
 Pick the version that matches the code you want to run.
 
@@ -179,11 +179,11 @@ JavaScript / TypeScript
    Lua WebAssembly binary (WASI)
 ```
 
-- `lua-engine.ts` â€” public API, marshalling, pcall
-- `wasi-polyfill.ts` â€” WASI snapshot preview1 surface for the browser/Node
-- `wasm-patcher.ts` â€” makes the funcref table growable; ensures exception tags are exported
-- `trampoline.ts` â€” small WASM stub so JS functions can be pushed as Lua C functions
-- `wasm/` â€” prebuilt `lua-5.1.5.wasm` â€¦ `lua-5.5.1.wasm`
+- `lua-engine.ts` - public API, marshalling, pcall
+- `wasi-polyfill.ts` - WASI snapshot preview1 surface for the browser/Node
+- `wasm-patcher.ts` - makes the funcref table growable; ensures exception tags are exported
+- `trampoline.ts` - small WASM stub so JS functions can be pushed as Lua C functions
+- `wasm/` - prebuilt `lua-5.1.5.wasm` ... `lua-5.5.1.wasm`
 
 ## Browser use
 
