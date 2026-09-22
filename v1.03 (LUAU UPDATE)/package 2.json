@@ -1,0 +1,47 @@
+{
+  "name": "rainsi-lua",
+  "version": "1.0.3",
+  "description": "Multi-version Lua and Luau virtual machine for WebAssembly/WASI with bidirectional JS↔Lua/Luau value marshalling and JavaScript callbacks.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "wasm",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node test-luau.mjs && node test-extended.mjs"
+  },
+  "keywords": [
+    "lua",
+    "luau",
+    "lua-vm",
+    "wasm",
+    "wasi",
+    "lua5.1",
+    "lua5.2",
+    "lua5.3",
+    "lua5.4",
+    "lua5.5",
+    "luau",
+    "webassembly"
+  ],
+  "author": "Rainsi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lalipa2003-arch/rainsi/issues"
+  },
+  "homepage": "https://github.com/lalipa2003-arch/rainsi#readme",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0"
+  }
+}
