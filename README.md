@@ -201,3 +201,18 @@ MIT
 
 - npm: [`rainsi-lua`](https://www.npmjs.com/package/rainsi-lua)
 - Source: [github.com/lalipa2003-arch/rainsi](https://github.com/lalipa2003-arch/rainsi)
+- ## Repository Maintenance Notice
+
+**This GitHub repository may be out of date.**
+
+Rainsi is primarily maintained and updated through its npm package. GitHub source files, bundled runtimes, and other repository contents may lag behind the published npm version.
+
+Keeping the repository fully synchronized is difficult with my current development setup, so updates to GitHub may be infrequent.
+
+For the latest published version of Rainsi, visit npm:
+
+- **npm:** https://www.npmjs.com/package/rainsi-lua
+- **GitHub:** https://github.com/lalipa2003-arch/rainsi
+
+Please don't assume that the files on GitHub exactly match the latest npm release. I appreciate your understanding!
+
